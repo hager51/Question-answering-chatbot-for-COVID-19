@@ -47,7 +47,7 @@ trigger our function.
 - Use request.args.get() to get the get the message/ input the user enter 
 then return it with the function that make response from the model to 
 get the answer. 
-
+ ```
 > from flask import Flask, render_template, request, redirect, url_for
 > from flask_ngrok import run_with_ngrok
 > app = Flask(__name__)
@@ -63,7 +63,7 @@ get the answer.
     > return answer_question(userText)
     
 > app.run()
-
+ ```
 8- Run your code and get your API. 
 
 
