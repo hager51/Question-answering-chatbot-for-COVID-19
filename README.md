@@ -4,25 +4,25 @@ we can run project in local machin or on colab directly
 how to run local ?
 step 1 
 1- Install flask and flask libraries.
-
+ ```
 $pip install Flask
-
+ ```
 2- Run virtual environment in case of implementing on local machine. Use 
 a virtual environment to manage the dependencies for your project, both 
 in development and in production. 
 Create an environment
 Create a project folder and a venv folder within:
-
+ ```
 > mkdir myproject
 > cd myproject 
 > py -3 -m venv venv
-
+ ```
 Activate the environment
 Before you work on your project, activate the corresponding 
 environment: 
-
+ ```
 > venv\Scripts\activate
-
+ ```
 3- Install ngrok in case of implementing on a cloud like colab. 
 !pip install flask-ngrok
 4- Prepare your model to call it in the flask function. 
@@ -48,21 +48,21 @@ trigger our function.
 then return it with the function that make response from the model to 
 get the answer. 
  ```
-> from flask import Flask, render_template, request, redirect, url_for
-> from flask_ngrok import run_with_ngrok
-> app = Flask(__name__)
-> run_with_ngrok(app)   
+from flask import Flask, render_template, request, redirect, url_for
+from flask_ngrok import run_with_ngrok
+app = Flask(__name__)
+run_with_ngrok(app)   
   
-> app.static_folder = 'static'
-> @app.route("/")
-> def home():
-    > return render_template("home.html")
-> @app.route("/get")
-> def get_bot_response():
-    > userText = request.args.get('msg')
-    > return answer_question(userText)
+app.static_folder = 'static'
+@app.route("/")
+def home():
+    return render_template("home.html")
+@app.route("/get")
+def get_bot_response():
+    userText = request.args.get('msg')
+    return answer_question(userText)
     
-> app.run()
+app.run()
  ```
 8- Run your code and get your API. 
 
