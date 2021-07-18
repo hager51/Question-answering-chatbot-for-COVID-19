@@ -1,0 +1,2 @@
+# Question-answering-chatbot-for-COVID-19
+The aim of our project is to create A COVID-19 Question Answer Chatbot to  improve answer selection process on the specific domain of COVID-19. With  InferMedica, we hope to learn whether public information from reputable  sources could be more effectively organized and shared in the wake of a crisis  as well as to understand issues that the public were most immediately curious  about. 
